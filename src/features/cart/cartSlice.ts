@@ -1,12 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { CartItem } from '../../models/types';
+import { StorageManager } from '../../utils/storage';
 
 interface CartState {
   items: CartItem[];
   isOpen: boolean;
 }
-
-import { StorageManager } from '../../utils/storage';
 
 const initialState: CartState = {
   items: StorageManager.getCart(),
