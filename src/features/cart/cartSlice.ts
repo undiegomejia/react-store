@@ -6,8 +6,10 @@ interface CartState {
   isOpen: boolean;
 }
 
+import { StorageManager } from '../../utils/storage';
+
 const initialState: CartState = {
-  items: JSON.parse(localStorage.getItem('cart') || '[]'),
+  items: StorageManager.getCart(),
   isOpen: false,
 };
 
@@ -26,11 +28,11 @@ const cartSlice = createSlice({
         state.items.push(action.payload);
       }
       
-      localStorage.setItem('cart', JSON.stringify(state.items));
+      StorageManager.setCart(state.items);
     },
     removeFromCart: (state, action: PayloadAction<string>) => {
       state.items = state.items.filter(item => item.productId !== action.payload);
-      localStorage.setItem('cart', JSON.stringify(state.items));
+      StorageManager.setCart(state.items);
     },
     updateQuantity: (
       state,
@@ -41,12 +43,12 @@ const cartSlice = createSlice({
       );
       if (item) {
         item.quantity = action.payload.quantity;
-        localStorage.setItem('cart', JSON.stringify(state.items));
+        StorageManager.setCart(state.items);
       }
     },
     clearCart: (state) => {
       state.items = [];
-      localStorage.removeItem('cart');
+      StorageManager.clearCart();
     },
     toggleCart: (state) => {
       state.isOpen = !state.isOpen;
