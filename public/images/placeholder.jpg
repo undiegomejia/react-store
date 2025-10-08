@@ -1,0 +1,6 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f5f5f5"/>
+  <text x="50%" y="45%" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">No Image</text>
+  <text x="50%" y="55%" font-family="Arial" font-size="12" fill="#999" text-anchor="middle">Available</text>
+</svg>
