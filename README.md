@@ -1,44 +1,49 @@
 # React Store
 
-A modern e-commerce application built with React, TypeScript, and Material-UI.
+An e-commerce platform implementation focused on performance and user experience. Built to demonstrate a scalable architecture using React and TypeScript.
 
-## Features
+## Core Functionality
 
-- 🛍️ Product browsing and filtering
-- 🔍 Search functionality
-- 🛒 Shopping cart management
-- 💳 Price range filtering
-- 📱 Responsive design for all devices
-- 🎨 Material-UI components
-- 🔐 User authentication
+- Product catalog with filtering capabilities
+- Product search and categorization
+- Cart management system
+- Price range filtering
+- Responsive layout
+- Component-based UI architecture
+- User authentication system
 
-## Tech Stack
+## Technical Implementation
 
-- React
-- TypeScript
-- Material-UI (MUI)
-- MSW (Mock Service Worker)
-- React Router
+Frontend:
+- React 18 with TypeScript
+- Material-UI for component architecture
+- React Router for navigation
+- MSW for API mocking during development
 
-## Getting Started
+State Management:
+- React Context API
+- Custom hooks for business logic
 
-1. Clone the repository:
+## Project Setup
+
+Prerequisites:
+- Node.js 16.x or higher
+- npm 7.x or higher
+
+Setup steps:
 ```bash
+# Clone repository
 git clone https://github.com/undiegomejia/react-store.git
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 cd react-store
 npm install
-```
 
-3. Start the development server:
-```bash
+# Start development server
 npm start
 ```
 
-The app will be available at [http://localhost:3000](http://localhost:3000)
+Application will be served at `http://localhost:3000`
 
 ## Development
 
